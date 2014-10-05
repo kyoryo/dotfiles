@@ -1,0 +1,73 @@
+/* FF CaseTer Theme */
+/* by kyoryo */
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+/* The above line should appear only once */
+
+#urlbar
+{
+   font-family: "Terminus (TTF)";
+   font-size: 12px;
+   text-align: center !important;
+   
+   border: none !important;
+   background-color: transparent !important;
+   
+}
+
+/* Hide the whole identity box in the address bar */
+#identity-box { display: none !important }
+
+/* Move the address bar text to the right
+to compensate for the above style */
+.urlbar-input-box {
+  padding-left: 9px !important
+}
+
+/* Hide the company name in the identity box for EV sites */
+#identity-icon-labels { display: none !important }
+
+/* enable this if you want to remove all icon exept pinned */
+.tab-icon-image:not([pinned]) {
+ display:none!important;
+}
+
+/* Tabs on toolbar control*/
+#TabsToolbar {
+   margin-top:   0px !important;
+   margin-bottom:   0px !important;
+   margin-left:   -5px !important;
+   margin-right:   0px !important;
+   
+   font-family: "Terminus (TTF)";
+   font-size: 12px;
+   text-align: center !important;
+   
+   background: transparent !important;
+     
+     
+}
+
+/* Tabs close button only appears on hover */
+ 
+#tabbrowser-tabs tab .tab-close-button {
+opacity:0 !important;
+}
+#tabbrowser-tabs tab .tab-close-button:hover {
+opacity:50 !important;
+}
+
+#main-window:not([customizing]):not([customize-entered]):not([inFullscreen]):not([onclose*="exitPrintPreview"])
+  #tab-view-deck { margin-top: -1px !important; }
+
+.tabbrowser-tab:not([selected="true"]),
+
+.tabs-newtab-button {   
+   border: none !important;
+   -moz-border-image: none !important;
+} 
+.tabbrowser-tab[pinned]{
+   border:1px !important;
+}
+.tabbrowser-tab[selected="true"]{
+
+}
