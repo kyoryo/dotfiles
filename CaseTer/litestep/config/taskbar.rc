@@ -1,0 +1,86 @@
+;   config/taskbar.rc
+
+;-----------------------
+;Define
+;-----------------------
+
+GLOBAL_FONT			"$TaskbarFont$"
+GLOBAL_FONT_HEIGHT		10
+GLOBAL_FONT_COLOR_BRIGHT	#ffffff
+GLOBAL_FONT_COLOR_DULL		#9E9E9E
+GLOBAL_FONT_SHADOW_COLOR	#393d41	
+TASKBARBUTTONHEIGHT		23
+;----------------------- 
+
+*xTaskbar    xTaskbar
+xTaskbarBehindWindow    xLabel InfoClock
+xTaskbarX    0
+xTaskbarY    0
+xTaskbarHeight    32
+xTaskbarLeftBorder    "$StartButtonX+StartButtonWidth+8$"
+xTaskbarRightBorder    "$InfoClockCurrentWidth+InfoSoundWidth+InfoDisplayWidth+TrayButtonWidth+16$"
+xTaskbarTopBorder    0
+xTaskbarBottomBorder    9
+xTaskbarButtonMaxWidth    190
+;xTaskbarButtonMaxHeight    "$xTaskbarHeight$"
+xTaskbarButtonMaxHeight    "$TASKBARBUTTONHEIGHT$"
+xTaskbarButtonXSpacing    -1
+xTaskbarAlphaMap    on
+xTaskbarShowIcon    off
+xTaskbarShowText    on
+xTaskbarShowHoverState    on
+xTaskbarUseHoverFontSettings    on
+xTaskbarShowActiveState    on
+xTaskbarOnRightClickDown    !TaskbarPopup
+xTaskbarOnMiddleClickButton	.close
+
+xTaskbarPaintingMode    .image
+xTaskbarImage    "taskbar\background.png"
+xTaskbarImageEdges     20 20 0 12
+
+*xTaskbarOverlayTaskbar 0 0 100% "$(xTaskbarHeight-8)/2$" TaskbarReflection #a
+TaskbarReflectionPaintingMode    .image
+TaskbarReflectionImage    "taskbar\reflection.png"
+TaskbarReflectionImageEdges    8 8 0 0
+
+xTaskbarButtonPaintingMode    .image
+xTaskbarButtonImage    "taskbar\buttonnormal.png"
+xTaskbarButtonImageEdges    2 2 0 0
+;xTaskbarHoverButtonPaintingMode    .image
+xTaskbarHoverButtonImage    "taskbar\buttonhover.png"
+;xTaskbarActiveButtonPaintingMode    .image
+xTaskbarActiveButtonImage    "taskbar\buttonactive.png"
+;xTaskbarFlashingButtonPaintingMode    .image
+xTaskbarFlashingButtonImage    "taskbar\buttonactive.png"
+
+;xTaskbarFont    "$TaskbarFont$"
+;xTaskbarFontHeight    "$TaskbarFontHeight$"
+;xTaskbarFontColor    "858789"
+;xTaskbarHoverFontColor    "b3b5b7"
+;xTaskbarActiveFontColor    "eeeeee"
+
+xTaskbarFont  		$GLOBAL_FONT$
+xTaskbarFontBold		false
+xTaskbarFontHeight  	$GLOBAL_FONT_HEIGHT$
+xTaskbarFontColor  		$GLOBAL_FONT_COLOR_DULL$
+xTaskbarHoverFontColor  $GLOBAL_FONT_COLOR_BRIGHT$
+xTaskbarActiveFontColor $GLOBAL_FONT_COLOR_BRIGHT$
+xTaskbarFlashingFontColor    "eeeeee"
+xTaskbarFontBorders    8 8 4 4
+xTaskbarFontAlign    .center
+xTaskbarFontVertAlign    .center
+xTaskbarFontScroll 	true
+xTaskbarFontScrollinterval 	1
+xTaskbarFontScrollspeed 	1
+
+*Popup    "Taskbar"    !New    !TaskbarPopup    xPopupSub
+	*Popup    "Minimize All"    !MinimizeWindows
+	*Popup    "Restore All"    !RestoreWindows
+	*Popup    "Cascade Visible"    !CascadeWindows
+	*Popup    "Tile Horizontal"    !TileWindowsH
+	*Popup    "Tile Vertical"    !TileWindowsV
+	*Popup    !Separator
+	*Popup    "Run..."    !Run
+	*Popup    "Taskmanager"    !Execute ["taskmgr.exe"]
+*Popup    ~New
+	

@@ -1,0 +1,88 @@
+;   config/desktop.rc
+
+jDeskWorkArea    "0,$xTaskbarHeight-8$,0,0$"
+jDeskDesktopFolder    "$Desktop$"
+jDeskRecycleOnRezChange
+*jDeskMButton3	[.none;!none;!PopupTasks;!none]
+
+*Label    DesktopClock
+DesktopClockStartHidden    on
+DesktopClockX    -694
+DesktopClockY    -334
+DesktopClockWidth    0
+DesktopClockHeight    "$DesktopClockFontHeight+8$"
+DesktopClockAutoWidthMode    .right
+DesktopClockAlphaMap    on
+DesktopClockAlphaTransparency    220
+DesktopClockTrackingIgnoreTrueTransparency    on
+DesktopClockText    "[time('ii nn')];[date('dd mm yy')]"
+DesktopClockOnLeftDoubleClick    !Execute ["control.exe" "timedate.cpl"]
+DesktopClockOnLeftClickDown    !ParseEvars !Execute [!LabelMoveBy DesktopClock 0 200 24 8] [!LabelNext DesktopClock] [!LabelMoveBy DesktopClock 0 -200 24 8]
+DesktopClockOnMiddleClickDown    .none
+DesktopClockOnRightClickDown    .none
+;DesktopClockPaintingMode    .singlecolor
+;DesktopClockColors    "000000"
+DesktopClockFont    "$DesktopClockFont$"
+;DesktopClockFont    "BitBold"
+DesktopClockFontHeight    "$DesktopClockFontHeight$"
+DesktopClockFontAlign    .right
+DesktopClockFontColor    "ffffff"
+DesktopClockFontBorders    4 8 0 0
+
+;Group DesktopAmp
+DesktopAmpStartHidden    off
+DesktopAmpAlphaMap    on
+DesktopAmpMoveable    on
+DesktopAmpMoveModifierKey    .none
+DesktopAmpNoMoveCursor    on
+DesktopAmpOnMove    !DesktopSongMove
+
+*Label    DesktopSongButton
+*DesktopSongButtonDockedTo    DesktopSong left
+DesktopSongButtonAddToGroup    DesktopAmp
+DesktopSongButtonX    1331
+DesktopSongButtonY    719
+DesktopSongButtonWidth    39
+DesktopSongButtonHeight    35
+DesktopSongButtonOnLeftClickDown    .none
+DesktopSongButtonOnMiddleClickDown    .none
+DesktopSongButtonOnRightClickDown    .none
+DesktopSongButtonPaintingMode    .image
+DesktopSongButtonImage    "desktop\backgroundbutton.png"
+*DesktopSongButtonOverlayLabel 4 4 27 27 DesktopButtonDefault #a
+DesktopButtonDefaultPaintingMode    .image
+DesktopButtonDefaultImage    "desktop\buttonplay.png"
+*DesktopSongButtonOverlayLabel 4 4 27 27 DesktopAmpPlay #as "[winampPlaying]"
+DesktopAmpPlayOnLeftClickDown    !Amp_Pause
+DesktopAmpPlayPaintingMode    .image
+DesktopAmpPlayImage    "desktop\buttonpause.png"
+DesktopAmpPlayHoverImage    "desktop\buttonpausehover.png"
+*DesktopSongButtonOverlayLabel 4 4 27 27 DesktopAmpPause #as "[winampPaused]"
+DesktopAmpPauseOnLeftClickDown    !Amp_Play
+DesktopAmpPausePaintingMode    .image
+DesktopAmpPauseImage    "desktop\buttonplay.png"
+DesktopAmpPauseHoverImage    "desktop\buttonplayhover.png"
+
+*Label    DesktopSong
+*DesktopSongDockedTo    DesktopSongButton right
+DesktopSongAddToGroup    DesktopAmp
+DesktopSongX    "$DesktopSongButtonX+DesktopSongButtonWidth-2$"
+DesktopSongY    "$DesktopSongButtonY+DesktopSongButtonHeight/2-DesktopSongHeight/2$"
+DesktopSongWidth    0
+DesktopSongHeight    "$DesktopSongFontHeight+16$"
+DesktopSongAutoWidthMode    .left
+DesktopSongText    "[If(winampPlaying)]<font color=#ffffff>[winampTitle]</font><font color=#aaaaaa> by </font><font color=#dddddd>[winampArtist]</font>[ElseIf(winampPaused)]<font color=#ffffff>[winampTitle]</font><font color=#aaaaaa> by </font><font color=#dddddd>[winampArtist]</font>[Else]Nothing Playing[EndIf]"
+;with time/paused text    DesktopSongText    "[If(winampPlaying)]<font color=#ffffff>[winampTitle]</font><font color=#aaaaaa> by </font><font color=#dddddd>[winampArtist]</font>    <font color=#888888>[winampTime]/[winampTotalTime]</font>[ElseIf(winampPaused)]<font color=#ffffff>[winampTitle]</font><font color=#aaaaaa> by </font><font color=#dddddd>[winampArtist]</font>    <font color=#888888>(Paused)</font>[Else]<font color=#aaaaaa>Nothing Playing</font>[EndIf]"
+DesktopSongOnLeftClickDown    .none ;!Amp_PowerOn
+DesktopSongOnMiddleClickDown    .none
+DesktopSongOnRightClickDown    .none
+;rating [IfEval(winampRating,'=',1)]?????[ElseIfEval(winampRating,'=',2)]?????[ElseIfEval(winampRating,'=',3)]?????[ElseIfEval(winampRating,'=',4)]?????[ElseIfEval(winampRating,'=',5)]?????[endIf]
+DesktopSongPaintingMode    .image
+DesktopSongImage    "desktop\backgroundsong.png"
+DesktopSongImageEdges    20 20 16 16
+DesktopSongFont    "$DesktopSongFont$"
+DesktopSongFontHeight    "$DesktopSongFontHeight$"
+DesktopSongFontAlign    .right
+DesktopSongFontColor    "ffffff"
+DesktopSongFontBorders    8 12 0 0
+	

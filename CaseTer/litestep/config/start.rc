@@ -1,0 +1,323 @@
+;   config/start.rc
+
+*Label    StartButton
+StartButtonBehindWindow    xPopup xPopup
+StartButtonX    "$xTaskbarX+20$"
+StartButtonY    "$(xTaskbarHeight-8)/2-StartButtonHeight/2$"
+StartButtonWidth    22
+StartButtonHeight    22
+StartButtonAlphaMap    on
+StartButtonTrackingIgnoreTrueTransparency    on
+StartButtonOnLeftClickDown    !Execute [!LuaExec StartMenuToggle()]
+
+StartButtonPaintingMode    .image
+StartButtonImage    "start\buttonstart.png"
+StartButtonHoverImage    "start\buttonstarthover.png"
+
+;Group    StartMenu
+StartMenuStartHidden    on
+StartMenuAlwaysOnTop    on
+StartMenuAlphaMap    on
+StartMenuCustomAlphaFade    12 12
+StartMenuOnLeftClick    .none
+StartMenuOnMiddleClick    .none
+StartMenuOnRightClick    .none
+StartMenuFont    "$GlobalFont$"
+StartMenuFontHeight    "$GlobalFontHeight$"
+
+*Label    StartUserName
+StartUserNameAddToGroup    StartMenu
+StartUserNameX    "$StartBackgroundX+16$"
+StartUserNameY    "$StartBackgroundY+25$"
+StartUserNameWidth    0
+StartUserNameHeight    "$StartUserNameFontHeight$"
+StartUserNameAutoWidthMode    .left
+StartUserNameAlphaMap    on
+StartUserNameTrackingIgnoreTrueTransparency    on
+StartUserNameText    "$UserName$"
+StartUserNameOnLeftClick    !Execute ["control.exe" "nusrmgr.cpl"][!LuaExec StartMenuToggle()]
+
+StartuserNameFont	"$DesktopClockFont$"
+StartUserNameFontColor    "454545"
+StartUserNameFontHeight    "$GlobalFontHeight+6$"
+StartUserNameFontsmoothing	true
+StartUserNameActiveFontSmoothing	true
+StartUserNameFontBold    true
+
+;Group    StartMenuGroup1
+StartMenuGroup1StartHidden    on
+StartMenuGroup1AlphaMap    on
+StartMenuGroup1TrackingIgnoreTrueTransparency    on
+StartMenuGroup1Font    "$GlobalFont$"
+StartMenuGroup1FontHeight    "$GlobalFontHeight$"
+StartMenuGroup1FontColor    "858789"
+StartMenuGroup1HoverFontColor    "454749"
+StartMenuGroup1FontAlign    .left
+StartMenuGroup1FontBorders    8 8 0 0
+StartMenuGroup1FontBold    off
+StartMenuGroup1FontClearType    "opaque"
+StartMenuGroup1PaintingMode    .singlecolor
+StartMenuGroup1Colors    "ffffff"
+StartMenuGroup1HoverPaintingMode    .image
+StartMenuGroup1HoverImage    "start\buttonhover.png"
+StartMenuGroup1ImageEdges    4 4 4 4
+
+*Label    StartMenuGroup1Item1
+StartMenuGroup1Item1AddToGroup    StartMenuGroup1
+StartMenuGroup1Item1BehindWindow    xLabel StartUserName
+StartMenuGroup1Item1X    "$StartBackgroundX+16$"
+StartMenuGroup1Item1Y    "$StartBackgroundY+56$"
+StartMenuGroup1Item1Width    "$StartBackgroundWidth-32$"
+StartMenuGroup1Item1Height    "$GlobalFontHeight+8$"
+StartMenuGroup1Item1Text    "Browser"
+StartMenuGroup1Item1OnLeftClickDown    !Execute ["$Browser$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup1Item2
+StartMenuGroup1Item2AddToGroup    StartMenuGroup1
+StartMenuGroup1Item2BehindWindow    xLabel StartMenuGroup1Item1
+StartMenuGroup1Item2X    "$StartMenuGroup1Item1X$"
+StartMenuGroup1Item2Y    "$StartMenuGroup1Item1Y+StartMenuGroup1Item1Height$"
+StartMenuGroup1Item2Width    "$StartBackgroundWidth-32$"
+StartMenuGroup1Item2Height    "$GlobalFontHeight+8$"
+StartMenuGroup1Item2Text    "Mail"
+StartMenuGroup1Item2OnLeftClickDown    !Execute ["$EMail$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup1Item3
+StartMenuGroup1Item3AddToGroup    StartMenuGroup1
+StartMenuGroup1Item3BehindWindow    xLabel StartMenuGroup1Item2
+StartMenuGroup1Item3X    "$StartMenuGroup1Item2X$"
+StartMenuGroup1Item3Y    "$StartMenuGroup1Item2Y+StartMenuGroup1Item2Height$"
+StartMenuGroup1Item3Width    "$StartBackgroundWidth-32$"
+StartMenuGroup1Item3Height    "$GlobalFontHeight+8$"
+StartMenuGroup1Item3Text    "File Manager"
+StartMenuGroup1Item3OnLeftClickDown    !Execute ["$FileManager$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup1Item4
+StartMenuGroup1Item4AddToGroup    StartMenuGroup1
+StartMenuGroup1Item4BehindWindow    xLabel StartMenuGroup1Item3
+StartMenuGroup1Item4X    "$StartMenuGroup1Item3X$"
+StartMenuGroup1Item4Y    "$StartMenuGroup1Item3Y+StartMenuGroup1Item3Height$"
+StartMenuGroup1Item4Width    "$StartBackgroundWidth-32$"
+StartMenuGroup1Item4Height    "$GlobalFontHeight+8$"
+StartMenuGroup1Item4Text    "Audio Player"
+StartMenuGroup1Item4OnLeftClickDown    !Execute ["$AudioPlayer$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup1Item5
+StartMenuGroup1Item5AddToGroup    StartMenuGroup1
+StartMenuGroup1Item5BehindWindow    xLabel StartMenuGroup1Item4
+StartMenuGroup1Item5X    "$StartMenuGroup1Item4X$"
+StartMenuGroup1Item5Y    "$StartMenuGroup1Item4Y+StartMenuGroup1Item4Height$"
+StartMenuGroup1Item5Width    "$StartBackgroundWidth-32$"
+StartMenuGroup1Item5Height    "$GlobalFontHeight+8$"
+StartMenuGroup1Item5Text    "Media Player"
+StartMenuGroup1Item5OnLeftClickDown    !Execute ["$MediaPlayer$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup1Item6
+StartMenuGroup1Item6AddToGroup    StartMenuGroup1
+StartMenuGroup1Item6BehindWindow    xLabel StartMenuGroup1Item5
+StartMenuGroup1Item6X    "$StartMenuGroup1Item5X$"
+StartMenuGroup1Item6Y    "$StartMenuGroup1Item5Y+StartMenuGroup1Item5Height$"
+StartMenuGroup1Item6Width    "$StartBackgroundWidth-32$"
+StartMenuGroup1Item6Height    "$GlobalFontHeight+8$"
+StartMenuGroup1Item6Text    "Text Editor"
+StartMenuGroup1Item6OnLeftClickDown    !Execute ["$TxtEditor$"][!LuaExec StartMenuToggle()]
+
+;Group    StartMenuGroup2
+StartMenuGroup2StartHidden    on
+StartMenuGroup2AlphaMap    on
+StartMenuGroup2TrackingIgnoreTrueTransparency    on
+StartMenuGroup2Font    "$GlobalFont$"
+StartMenuGroup2FontHeight    "$GlobalFontHeight$"
+StartMenuGroup2FontColor    "858789"
+StartMenuGroup2HoverFontColor    "454749"
+StartMenuGroup2FontAlign    .left
+StartMenuGroup2FontBorders    8 8 0 0
+StartMenuGroup2FontBold    off
+StartMenuGroup2FontClearType    "opaque"
+StartMenuGroup2PaintingMode    .singlecolor
+StartMenuGroup2Colors    "ffffff"
+StartMenuGroup2HoverPaintingMode    .image
+StartMenuGroup2HoverImage    "start\buttonhover.png"
+StartMenuGroup2ImageEdges    4 4 4 4
+
+*Label    StartMenuGroup2Item1
+StartMenuGroup2Item1AddToGroup    StartMenuGroup2
+StartMenuGroup2Item1BehindWindow    xLabel StartMenuGroup1Item6
+StartMenuGroup2Item1X    "$StartBackgroundX+16$"
+StartMenuGroup2Item1Y    "$StartBackgroundY+56$"
+StartMenuGroup2Item1Width    "$StartBackgroundWidth-32$"
+StartMenuGroup2Item1Height    "$GlobalFontHeight+8$"
+StartMenuGroup2Item1Text    "Messenger"
+StartMenuGroup2Item1OnLeftClickDown    !Execute ["$IM$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup2Item2
+StartMenuGroup2Item2AddToGroup    StartMenuGroup2
+StartMenuGroup2Item2BehindWindow    xLabel StartMenuGroup2Item1
+StartMenuGroup2Item2X    "$StartMenuGroup2Item1X$"
+StartMenuGroup2Item2Y    "$StartMenuGroup2Item1Y+StartMenuGroup2Item1Height$"
+StartMenuGroup2Item2Width    "$StartBackgroundWidth-32$"
+StartMenuGroup2Item2Height    "$GlobalFontHeight+8$"
+StartMenuGroup2Item2Text    "Chat"
+StartMenuGroup2Item2OnLeftClickDown    !Execute ["$IRC$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup2Item3
+StartMenuGroup2Item3AddToGroup    StartMenuGroup2
+StartMenuGroup2Item3BehindWindow    xLabel StartMenuGroup2Item2
+StartMenuGroup2Item3X    "$StartMenuGroup2Item2X$"
+StartMenuGroup2Item3Y    "$StartMenuGroup2Item2Y+StartMenuGroup2Item2Height$"
+StartMenuGroup2Item3Width    "$StartBackgroundWidth-32$"
+StartMenuGroup2Item3Height    "$GlobalFontHeight+8$"
+StartMenuGroup2Item3Text    "Picture Viewer"
+StartMenuGroup2Item3OnLeftClickDown    !Execute ["$GfxViewer$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup2Item4
+StartMenuGroup2Item4AddToGroup    StartMenuGroup2
+StartMenuGroup2Item4BehindWindow    xLabel StartMenuGroup2Item3
+StartMenuGroup2Item4X    "$StartMenuGroup2Item3X$"
+StartMenuGroup2Item4Y    "$StartMenuGroup2Item3Y+StartMenuGroup2Item3Height$"
+StartMenuGroup2Item4Width    "$StartBackgroundWidth-32$"
+StartMenuGroup2Item4Height    "$GlobalFontHeight+8$"
+StartMenuGroup2Item4Text    "Picture Editor"
+StartMenuGroup2Item4OnLeftClickDown    !Execute ["$GfxEditor$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup2Item5
+StartMenuGroup2Item5AddToGroup    StartMenuGroup2
+StartMenuGroup2Item5BehindWindow    xLabel StartMenuGroup2Item4
+StartMenuGroup2Item5X    "$StartMenuGroup2Item4X$"
+StartMenuGroup2Item5Y    "$StartMenuGroup2Item4Y+StartMenuGroup2Item4Height$"
+StartMenuGroup2Item5Width    "$StartBackgroundWidth-32$"
+StartMenuGroup2Item5Height    "$GlobalFontHeight+8$"
+StartMenuGroup2Item5Text    "Terminal"
+StartMenuGroup2Item5OnLeftClickDown    !Execute ["$CmdPrompt$"][!LuaExec StartMenuToggle()]
+
+;Group    StartMenuGroup3
+StartMenuGroup3StartHidden    on
+StartMenuGroup3AlphaMap    on
+StartMenuGroup3TrackingIgnoreTrueTransparency    on
+StartMenuGroup3Font    "$GlobalFont$"
+StartMenuGroup3FontHeight    "$GlobalFontHeight$"
+StartMenuGroup3FontColor    "858789"
+StartMenuGroup3HoverFontColor    "454749"
+StartMenuGroup3FontAlign    .left
+StartMenuGroup3FontBorders    8 8 0 0
+StartMenuGroup3FontBold    off
+StartMenuGroup3FontClearType    "opaque"
+StartMenuGroup3PaintingMode    .singlecolor
+StartMenuGroup3Colors    "ffffff"
+StartMenuGroup3HoverPaintingMode    .image
+StartMenuGroup3HoverImage    "start\buttonhover.png"
+StartMenuGroup3ImageEdges    4 4 4 4
+
+*Label    StartMenuGroup3Item1
+StartMenuGroup3Item1AddToGroup    StartMenuGroup3
+StartMenuGroup3Item1BehindWindow    xLabel StartMenuGroup2Item5
+StartMenuGroup3Item1X    "$StartBackgroundX+16$"
+StartMenuGroup3Item1Y    "$StartBackgroundY+56$"
+StartMenuGroup3Item1Width    "$StartBackgroundWidth-32$"
+StartMenuGroup3Item1Height    "$GlobalFontHeight+8$"
+StartMenuGroup3Item1Text    "Home"
+StartMenuGroup3Item1OnLeftClickDown    !Execute ["$Documents$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup3Item2
+StartMenuGroup3Item2AddToGroup    StartMenuGroup3
+StartMenuGroup3Item2BehindWindow    xLabel StartMenuGroup3Item1
+StartMenuGroup3Item2X    "$StartMenuGroup3Item1X$"
+StartMenuGroup3Item2Y    "$StartMenuGroup3Item1Y+StartMenuGroup3Item1Height$"
+StartMenuGroup3Item2Width    "$StartBackgroundWidth-32$"
+StartMenuGroup3Item2Height    "$GlobalFontHeight+8$"
+StartMenuGroup3Item2Text    "Internal"
+StartMenuGroup3Item2OnLeftClickDown    !Execute ["$Drives$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup3Item3
+StartMenuGroup3Item3AddToGroup    StartMenuGroup3
+StartMenuGroup3Item3BehindWindow    xLabel StartMenuGroup3Item2
+StartMenuGroup3Item3X    "$StartMenuGroup3Item2X$"
+StartMenuGroup3Item3Y    "$StartMenuGroup3Item2Y+StartMenuGroup3Item2Height$"
+StartMenuGroup3Item3Width    "$StartBackgroundWidth-32$"
+StartMenuGroup3Item3Height    "$GlobalFontHeight+8$"
+StartMenuGroup3Item3Text    "Trash"
+StartMenuGroup3Item3OnLeftClickDown    !Execute ["$BitBucket$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup3Item4
+StartMenuGroup3Item4AddToGroup    StartMenuGroup3
+StartMenuGroup3Item4BehindWindow    xLabel StartMenuGroup3Item3
+StartMenuGroup3Item4X    "$StartMenuGroup3Item3X$"
+StartMenuGroup3Item4Y    "$StartMenuGroup3Item3Y+StartMenuGroup3Item3Height$"
+StartMenuGroup3Item4Width    "$StartBackgroundWidth-32$"
+StartMenuGroup3Item4Height    "$GlobalFontHeight+8$"
+StartMenuGroup3Item4Text    "Desktop"
+StartMenuGroup3Item4OnLeftClickDown    !Execute ["$Desktop$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup3Item5
+StartMenuGroup3Item5AddToGroup    StartMenuGroup3
+StartMenuGroup3Item5BehindWindow    xLabel StartMenuGroup3Item4
+StartMenuGroup3Item5X    "$StartMenuGroup3Item4X$"
+StartMenuGroup3Item5Y    "$StartMenuGroup3Item4Y+StartMenuGroup3Item4Height$"
+StartMenuGroup3Item5Width    "$StartBackgroundWidth-32$"
+StartMenuGroup3Item5Height    "$GlobalFontHeight+8$"
+StartMenuGroup3Item5Text    "Preferences"
+StartMenuGroup3Item5OnLeftClickDown    !Execute ["$Controls$"][!LuaExec StartMenuToggle()]
+
+*Label    StartMenuGroup3Item6
+StartMenuGroup3Item6AddToGroup    StartMenuGroup3
+StartMenuGroup3Item6BehindWindow    xLabel StartMenuGroup3Item5
+StartMenuGroup3Item6X    "$StartMenuGroup3Item5X$"
+StartMenuGroup3Item6Y    "$StartMenuGroup3Item5Y+StartMenuGroup3Item5Height$"
+StartMenuGroup3Item6Width    "$StartBackgroundWidth-32$"
+StartMenuGroup3Item6Height    "$GlobalFontHeight+8$"
+StartMenuGroup3Item6Text    "Printers"
+StartMenuGroup3Item6OnLeftClickDown    !Execute ["$Printers$"][!LuaExec StartMenuToggle()]
+
+*Label    StartBackground
+StartBackgroundAddToGroup    StartMenu
+StartBackgroundBehindWindow    xLabel StartMenuGroup3Item6
+StartBackgroundX    "$StartButtonX-12$"
+StartBackgroundY    "$xTaskbarY+xTaskbarHeight-8$"
+StartBackgroundWidth    180
+StartBackgroundHeight    266
+;StartBackgroundOnLeave    !Execute [!LuaExec StartMenuToggle()]
+
+StartBackgroundPaintingMode    .image
+StartBackgroundImage    "start\glass.png"
+StartBackgroundImageEdges    28 10 18 10
+StartBackgroundOnLeftClickDown    !Execute [!LuaExec StartMenuToggle()]
+
+*StartBackgroundOverlayLabel 0 0 100% 100% StartBackgroundReflection #a
+StartBackgroundReflectionPaintingMode    .image
+StartBackgroundReflectionImage    "start\reflection.png"
+StartBackgroundReflectionImageEdges    10 10 18 10
+*StartBackgroundOverlayLabel 0 40 100% 100%-40 StartBackgroundBackground #a
+StartBackgroundBackgroundPaintingMode    .image
+StartBackgroundBackgroundImage    "start\background.png"
+StartBackgroundBackgroundImageEdges    20 20 20 20
+*StartBackgroundOverlayLabel 0 -57 100% 47 StartBackgroundBottom #a
+StartBackgroundBottomPaintingMode    .image
+StartBackgroundBottomImage    "start\bottom.png"
+StartBackgroundBottomImageEdges    20 46 0 0
+*StartBackgroundOverlayLabel 0 -59 100% 2 StartBackgroundBottomLine #a
+StartBackgroundBottomLinePaintingMode    .image
+StartBackgroundBottomLineImage    "start\bottomline.png"
+StartBackgroundBottomLineImageEdges    10 10 0 0
+
+*StartBackgroundOverlayLabel -114 -59 39 28 StartBackgroundTab3 #as
+StartBackgroundTab3OnLeftClickDown    !Execute [!LuaExec StartMenuGroup(3)]
+StartBackgroundTab3PaintingMode    .image
+StartBackgroundTab3Image    "start\tab3set1normal.png"
+StartBackgroundTab3HoverImage    "start\tab3set1hover.png"
+*StartBackgroundOverlayLabel -75 -59 31 28 StartBackgroundTab2 #as
+StartBackgroundTab2OnLeftClickDown    !Execute [!LuaExec StartMenuGroup(2)]
+StartBackgroundTab2PaintingMode    .image
+StartBackgroundTab2Image    "start\tab2set1normal.png"
+StartBackgroundTab2HoverImage    "start\tab2set1hover.png"
+*StartBackgroundOverlayLabel -44 -59 34 28 StartBackgroundTab1 #as
+StartBackgroundTab1OnLeftClickDown    !Execute [!LuaExec StartMenuGroup(1)]
+StartBackgroundTab1PaintingMode    .image
+StartBackgroundTab1Image    "start\tab1set1active.png"
+StartBackgroundTab1HoverImage    "start\tab1set1active.png"
+
+*StartBackgroundOverlayLabel 30 -42 17 17 StartBackgroundButtonPower #as
+StartBackgroundButtonPowerOnLeftClickDown    !Execute [!LabelShow Shutdown][!LabelAlwaysOnTop Shutdown on][!LuaExec StartMenuToggle()];!Shutdown
+StartBackgroundButtonPowerPaintingMode    .image
+StartBackgroundButtonPowerImage    "start\buttonpower.png"
+StartBackgroundButtonPowerHoverImage    "start\buttonpowerhover.png"
+	

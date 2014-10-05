@@ -1,0 +1,39 @@
+OTSMajorVersion    2
+OTSMinorVersion    0
+
+include    "$ThemeDir$settings\themevars.rc"
+include    "$ThemeDir$settings\themepopup.rc"
+
+*LuaFile    "$ThemeDir$settings\themescripts.lua"
+
+LSImageFolder    "$ThemeDir$images\"
+
+*NetLoadModuleSite    "http://modules.ls-universe.info/modules/"
+*NetLoadModuleSite    "http://www.ls-themes.org/modules/download/"
+*NetLoadModule    "xPaintClass-1.0"
+*NetLoadModule    "xStatsClass-1.1.5"
+*NetLoadModule    "lslua-0.8.1" load lslua.dll
+*NetLoadModule    "xLabel-4.3"
+*NetLoadModule    "AlbumArt-1.6"
+;*NetLoadModule    "Dynamp-0.51"
+*NetLoadModule    "xPopup-2.1"
+*NetLoadModule    "xTaskbar-2.3.2"
+*NetLoadModule    "xTray-2.2.2"
+*NetLoadModule    "LsSliderFoo-1.85"
+*NetLoadModule    "jDesk-0.75"
+*NetLoadModule    "ByeWindows-0.4"
+*NetLoadModule    "lswchanger-1.2"
+*NetLoadModule    "mzscript-1.0-rc2"
+
+*Script Start !wallpaper .center "$ThemeDir$wallpaper\wallpaper.bmp"
+
+;art for cover_art
+;include    "$ThemeDir$config\art.rc"
+include    "$ThemeDir$config\global.rc"
+include    "$ThemeDir$config\desktop.rc"
+include    "$ThemeDir$config\popup.rc"
+include    "$ThemeDir$config\taskbar.rc"
+include    "$ThemeDir$config\start.rc"
+include    "$ThemeDir$config\info.rc"
+include    "$ThemeDir$config\tray.rc"
+include    "$ThemeDir$config\shutdown.rc"	

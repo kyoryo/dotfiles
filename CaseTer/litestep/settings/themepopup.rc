@@ -1,0 +1,16 @@
+;   settings/themepopup.rc
+
+*Popup    "Options"    !New    !PopupTheme
+	*Popup "Show Album Art" !execute [!LabelShow back][!LabelShow art]
+	*Popup "Hide Album Art" !execute [!LabelHide back][!LabelHide art]
+	*Popup    !Separator
+	*Popup    "Toggle Desktop Song"    !DesktopAmpToggle
+	*Popup    "Toggle Desktop Clock/Date"    !DesktopClockToggle
+;	*Popup    !Separator
+;	*Popup    "Reset Desktop Song Position"    !DesktopSongReset
+	*Popup    !Separator
+	*Popup    "Set 12h Clock Format"    !LuaExec ClockFormat(12)
+	*Popup    "Set 24h Clock Format"    !LuaExec ClockFormat(24)
+*Popup    ~New
+
+;   EOF

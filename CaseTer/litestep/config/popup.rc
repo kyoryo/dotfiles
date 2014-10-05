@@ -1,0 +1,76 @@
+;   config/popup.rc
+
+*xPopup    xPopup
+xPopupBehindWindow    "HWND_TOP"
+xPopupAlphaMap    on
+xPopupCustomAlphaFade    12 12
+xPopupEntryHeight    "$PopupFontHeight+8$"
+xPopupShowIcon    off
+xPopupShowCaption    .none
+xPopupOverlapX    -8
+xPopupMinWidth    120
+xPopupLeftBorder    16
+xPopupRightBorder    16
+xPopupTopBorder    32
+xPopupBottomBorder    35
+xPopupSeparatorHeight    8
+xPopupArrowOffset    8
+
+xPopupPaintingMode    .image
+xPopupImage    "popup\glass.png"
+xPopupImageEdges    10 10 10 10
+
+*xPopupOverlayPopup 0 0 100% 100% PopupReflection #a
+PopupReflectionPaintingMode    .image
+PopupReflectionImage    "popup\reflection.png"
+PopupReflectionImageEdges    10 10 10 10
+*xPopupOverlayPopup 0 0 100% 100% PopupBackground #a
+PopupBackgroundPaintingMode    .image
+PopupBackgroundImage    "popup\background.png"
+PopupBackgroundImageEdges    20 20 20 20
+*xPopupOverlayPopup -26 14 12 12 PopupCorner #a
+PopupCornerPaintingMode    .image
+PopupCornerImage    "popup\circle.png"
+*xPopupOverlayPopup 0 -27 100% 17 PopupBottom #a
+PopupBottomPaintingMode    .image
+PopupBottomImage    "popup\bottom.png"
+PopupBottomImageEdges    20 46 0 0
+*xPopupOverlayPopup 0 -29 100% 2 PopupBottomLine #a
+PopupBottomLinePaintingMode    .image
+PopupBottomLineImage    "popup\bottomline.png"
+PopupBottomLineImageEdges    10 10 0 0
+
+xPopupActiveEntryPaintingMode    .image
+xPopupActiveEntryImage    "popup\hover.png"
+xPopupActiveEntryImageEdges    4 4 4 4
+xPopupSeparatorPaintingMode    .image
+xPopupSeparatorImage    "popup\separator.png"
+xPopupArrowPaintingMode    .image
+xPopupArrowImage    "popup\arrow.png"
+xPopupSubPaintingMode    .image
+
+*xPopupCustomSubFolder    xPopupSub
+xPopupSubBottomBorder    16
+xPopupFolderOpenDelay    180
+
+xPopupSubImage    "popup\glass.png"
+xPopupSubImageEdges    10 10 10 10
+
+*xPopupSubOverlayPopup 0 0 100% 100% PopupReflectionSub #a
+PopupReflectionSubPaintingMode    .image
+PopupReflectionSubImage    "popup\reflection.png"
+PopupReflectionSubImageEdges    10 10 10 10
+*xPopupSubOverlayPopup 0 0 100% 100% PopupBackgroundSub #a
+PopupBackgroundSubPaintingMode    .image
+PopupBackgroundSubImage    "popup\background.png"
+PopupBackgroundSubImageEdges    20 20 20 20
+*xPopupSubOverlayPopup -26 14 12 12 PopupCornerSub #a
+PopupCornerSubPaintingMode    .image
+PopupCornerSubImage    "popup\circle2.png"
+
+xPopupFont    "$PopupFont$"
+xPopupFontHeight    "$PopupFontHeight$"
+xPopupFontColor    "858789"
+xPopupActiveEntryFontColor    "454749"
+xPopupFontBorders    8 60 0 0
+	

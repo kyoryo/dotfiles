@@ -1,0 +1,28 @@
+;   config/info.rc
+
+;Group    InfoItems
+InfoItemsAlphaMap    on
+InfoItemsTrackingIgnoreTrueTransparency    on
+
+*Label    InfoClock
+InfoClockBehindWindow    xLabel StartButton
+InfoClockAddToGroup    InfoItems
+InfoClockX    -"$InfoClockWidth+8$"
+InfoClockY    "$(xTaskbarHeight-8)/2-InfoClockHeight/2$"
+InfoClockWidth    4
+InfoClockHeight    "$InfoClockFontHeight$"
+InfoClockAutoWidthMode    .right
+InfoClockText    "[date('d ddd')] [time('ii:nn')]"
+InfoClockOnLeftClick    !Execute ["control.exe" "timedate.cpl"]
+InfoClockOnMiddleClickDown    .none
+InfoClockOnRightClickDown	.none
+InfoClockTooltip    "[date('dd mm yy')]"
+
+InfoClockPaintingMode    .image
+InfoClockImage    "magicpink.bmp"
+
+InfoClockFont    "$InfoClockFont$"
+InfoClockFontHeight    "$InfoClockFontHeight$"
+InfoClockFontColor    "858789"
+InfoClockFontBorders    8 4 0 1
+InfoClockFontClearType    off

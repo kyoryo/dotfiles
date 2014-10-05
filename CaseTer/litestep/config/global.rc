@@ -1,0 +1,26 @@
+;   config/global.rc
+
+GlobalFont    "Terminus"
+;GlobalFont    "Segoe UI"
+GlobalFontHeight    10
+GlobalFontBold		false
+GlobalFontsmoothing	true
+GlobalActiveFontSmoothing	true
+
+GlobalShowTooltip    off
+GlobalTooltipFont    "$GlobalFont$"
+GlobalTooltipFontHeight    "$GlobalFontHeight$"
+GlobalTooltipDurations    1000
+
+;PopupFont    "PF Tempesta Five Condensed"
+PopupFont    "Terminus"
+PopupFontHeight    10
+
+TaskbarFont	"Terminus"
+;TaskbarFont    "cure.se medium"
+;TaskbarFont    "Segoe UI"
+TaskbarFontHeight    10
+
+InfoClockFont    "Terminus"
+InfoClockFontHeight    12
+

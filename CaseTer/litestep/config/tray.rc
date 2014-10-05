@@ -1,0 +1,57 @@
+;   config/tray.rc
+
+*Label    TrayButton
+TrayButtonBehindWindow    xLabel StartButton
+TrayButtonAddToGroup    InfoItems
+TrayButtonX    "-$InfoClockCurrentWidth+27$"
+;TrayButtonX    "-$InfoClockCurrentWidth+InfoSoundWidth+InfoDisplayWidth+TrayButtonWidth+16$"
+TrayButtonY    "$(xTaskbarHeight-8)/2-TrayButtonHeight/2$"
+TrayButtonWidth    22
+TrayButtonHeight    22
+TrayButtonOnLeftClickDown    !Execute [!xTrayToggle][!xTrayAlwaysOnTop on]
+TrayButtonOnMiddleClickDown    !xTrayToggleHiddenIcons
+TrayButtonOnRightClickDown    .none
+
+TrayButtonPaintingMode    .image
+TrayButtonImage    "tray\buttontray.png"
+TrayButtonHoverImage    "tray\buttontrayhover.png"
+
+*xTray    xTray
+xTrayBehindWindow    xPopup xPopup
+xTrayAlwaysOnTop    on
+xTrayStartHidden    on
+xTrayX    "$TrayButtonX-12$"
+xTrayY    "$xTaskbarY+xTaskbarHeight-8$"
+xTrayWidth    32
+xTrayHeight    32
+xTrayAutoSize    on
+xTrayAlphaMap    on
+xTrayCustomAlphaFade    12 12
+xTrayLeftBorder    28
+xTrayRightBorder    28
+xTrayTopBorder    28
+xTrayBottomBorder    20
+xTrayLayout    .horizontal
+xTrayDirection    .right
+xTrayWrapDirection    .bottom
+xTrayLines    2
+xTrayWrapCount    3
+xTrayXSpacing    8
+xTrayYSpacing    8
+xTrayOnLeftClickDown    !xTrayHide
+xTrayOnMiddleClickDown    !xTrayToggleHiddenIcons
+xTrayOnLeave    !xTrayHide
+
+xTrayPaintingMode    .image
+xTrayImage    "tray\glass.png"
+xTrayImageEdges    28 10 18 10
+
+*xTrayOverlayTray 0 0 100% 100% TrayReflection #a
+TrayReflectionPaintingMode    .image
+TrayReflectionImage    "tray\reflection.png"
+TrayReflectionImageEdges    10 10 18 10
+*xTrayOverlayTray 0 22 100% 100%-22 TrayBackground #a
+TrayBackgroundPaintingMode    .image
+TrayBackgroundImage    "tray\background.png"
+TrayBackgroundImageEdges    20 20 20 20
+	

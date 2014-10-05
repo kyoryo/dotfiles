@@ -1,0 +1,59 @@
+;   config/shutdown
+
+*Label    Shutdown
+ShutdownBehindWindow    xPopup xPopup
+ShutdownStartHidden    on
+ShutdownAlwaysOnTop    on
+ShutdownX    "-$ShutdownWidth/2$c"
+ShutdownY    "-$ShutdownHeight/2$c"
+ShutdownWidth    242
+ShutdownHeight    96
+ShutdownAlphaMap    on
+ShutdownCustomAlphaFade    12 12
+ShutdownOnLeftClick    .none
+ShutdownOnMiddleClick    .none
+ShutdownOnRightClick    .none
+
+ShutdownPaintingMode    .image
+ShutdownImage    "shutdown\glass.png"
+ShutdownImageEdges    10 10 10 10
+
+*ShutdownOverlayLabel 0 0 100% 100% ShutdownReflection #a
+ShutdownReflectionPaintingMode    .image
+ShutdownReflectionImage    "shutdown\reflection.png"
+ShutdownReflectionImageEdges    10 10 10 10
+*ShutdownOverlayLabel 0 15 100% 100%-15 ShutdownBackground #a
+ShutdownBackgroundPaintingMode    .image
+ShutdownBackgroundImage    "shutdown\background.png"
+ShutdownBackgroundImageEdges    20 20 20 20
+*ShutdownOverlayLabel -25 10 11 11 ShutdownCloseButton #ah
+ShutdownCloseButtonHoverPaintingMode    .image
+ShutdownCloseButtonHoverImage    "shutdown\buttonclose.png"
+*ShutdownOverlayLabel -25 10 11 11 ShutdownClose #as
+ShutdownCloseOnLeftClickDown    !LabelHide Shutdown
+
+*ShutdownOverlayLabel 177 35 41 41 ShutdownButtonPower #as
+ShutdownButtonPowerTooltip    "Shutdown"
+ShutdownButtonPowerOnLeftClickDown    !byeShutdown
+ShutdownButtonPowerPaintingMode    .image
+ShutdownButtonPowerImage    "shutdown\buttonpower.png"
+ShutdownButtonPowerHoverImage    "shutdown\buttonpowerhover.png"
+*ShutdownOverlayLabel 126 35 41 41 ShutdownButtonReboot #as
+ShutdownButtonRebootTooltip    "Reboot"
+ShutdownButtonRebootOnLeftClickDown    !byeReboot
+ShutdownButtonRebootPaintingMode    .image
+ShutdownButtonRebootImage    "shutdown\buttonreboot.png"
+ShutdownButtonRebootHoverImage    "shutdown\buttonreboothover.png"
+*ShutdownOverlayLabel 75 35 41 41 ShutdownButtonLogoff #as
+ShutdownButtonLogoffTooltip    "Log Off $UserName$"
+ShutdownButtonLogoffOnLeftClickDown    !Logoff
+ShutdownButtonLogoffPaintingMode    .image
+ShutdownButtonLogoffImage    "shutdown\buttonlogoff.png"
+ShutdownButtonLogoffHoverImage    "shutdown\buttonlogoffhover.png"
+*ShutdownOverlayLabel 24 35 41 41 ShutdownButtonLock #as
+ShutdownButtonLockTooltip    "Lock Workstation"
+ShutdownButtonLockOnLeftClickDown    !byeLockWorkstation
+ShutdownButtonLockPaintingMode    .image
+ShutdownButtonLockImage    "shutdown\buttonlock.png"
+ShutdownButtonLockHoverImage    "shutdown\buttonlockhover.png"
+	
