@@ -1,3 +1,3 @@
-CasTer Theme
+CaseTer Theme
 ============
 Piles of secret recipe
