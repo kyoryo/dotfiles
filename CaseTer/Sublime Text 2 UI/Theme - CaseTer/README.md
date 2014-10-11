@@ -1,5 +1,7 @@
 CaseTer Theme
 ------------------------------------------------------------------------
+![CaseTer Theme](https://github.com/kyoryo/dotfiles/blob/master/CaseTer/Sublime%20Text%202%20UI/Theme%20-%20CaseTer/preview.png)  
+_CaseTer UI theme for Sublime Text 2_
 
 This theme is based on Ayin of Nil theme
 
