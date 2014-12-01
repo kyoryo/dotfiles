@@ -1,0 +1,598 @@
+@-moz-document domain("boards.4chan.org") {
+/* Relative to the general appearance of 4chan. */
+body {
+background: #ebebeb !important;
+font-family: 'Open Sans', sans-serif !important;
+color: #666 !important;
+margin: auto !important;
+font-size: 11px !important;
+}
+hr {
+margin-top:-15px !important;
+padding-top: 5px !important;
+border: 0 !important;
+}
+/* Links */
+a {
+color: #667399 !important;
+}
+/* Global Message*/
+h2 {
+color: #667399!important;
+margin-top: 35px !important;
+}
+.fa-minus-square-o:before {
+content:"?"!important;
+margin-top: 15px !important;
+}
+/* Foreground of the header bar */
+#board-list,
+#custom-board-list {
+color: #aaa !important;
+font-family: 'Open Sans Semibold', sans-serif !important;
+font-size: 10pt !important;
+}
+#header-bar a {
+color: #ccc !important;
+}
+#header-bar .brackets-wrap:after,
+#header-bar .brackets-wrap:before,
+.shortcut:not(:last-child):after {
+content:""!important;
+}
+#shortcuts {
+padding-left:16px;
+position:absolute;
+}
+.shortcut .fa {
+font-size:13px!important;
+}
+.shortcut .fa-bars:before {
+content:"?"!important;
+}
+.shortcut .fa-bars {
+vertical-align:0!important;
+}
+.shortcut:not(:last-child) {
+margin:0 3px;
+}
+/* Background of the header bar */
+#header-bar.dialog {
+background:#5b99bd !important;
+border: 0 !important;
+box-shadow: rgba(170,170,170,.9) 0px 1px 2px 1px !important;
+}
+/* Color of the selected board on the header bar. */
+#header-bar a.current {
+color: #eee !important;
+}
+/* Board List */
+#board-list {
+text-align: center !important;
+margin-left: -70px !important;
+}
+/* Bottom Page list (use ALL THREADS) */
+.pagelist {
+display: none!important;
+}
+/* Appearance of the menus. */
+#menu.dialog,
+.entry {
+background: #e8e8e8 !important;
+border: 0 !important;
+color: #666 !important;
+font-family: 'Open Sans', sans-serif !important;
+font-size: 0.750rem !important;
+}
+#menu.dialog,
+.entry:hover {
+background: #e8e8e8 !important;
+border: 0 !important;
+color: #66998C !important;
+font-family: 'Open Sans', sans-serif !important;
+font-size: 0.750rem !important;
+}
+/* Catalog search and page links */
+#nav-links {
+background: #f8f8f8 !important;
+border-color: #ebebeb !important;
+box-shadow: rgba(170,170,170,.9) 2px 2px 4px 4px !important;
+right:0;
+padding:2px;
+position:fixed;
+bottom:0;
+z-index:10;
+}
+#index-mode,
+#index-sort,
+#index-size {
+color: #777!important;
+border: none !important;
+font-family: "Open Sans" !important;
+margin-left: 7px !important;
+background: #f8f8f8 !important;
+box-shadow: none !important;
+}
+option {
+color: #777!important;
+border: 0px !important;
+font-family: "Open Sans" !important;
+background: #f8f8f8 !important;
+box-shadow: none !important;
+}
+.catalog-mode .board {
+margin-top: 50px !important;
+}
+/* Appearance of the thread updater and thread stats. */
+#index-search.field,
+#updater.dialog,
+#thread-stats.dialog {
+font-family: 'Open Sans', sans-serif !important;
+font-size: 0.750rem !important;
+background: transparent !important;
+color: #777 !important;
+border-style: none !important;
+}
+#update-status {
+color: #777 !important;
+font-family: 'Open Sans', sans-serif !important;
+font-size: 0.750rem !important;
+}
+/* Thread updater menu */
+#index-search.field:hover,
+#updater.dialog:hover {
+background: #e8e8e8 !important;
+color: #777 !important;
+}
+/* Clean up. */
+.bottomCtrl.desktop,
+#absbot.absBotText,
+.navLinks.desktop,
+.navLinks.navLinksBot.desktop {
+display: none !important;
+}
+/* Hide ads? */
+div.center,
+div.topad.center,
+div.middlead.center,
+div.bottomad.center,
+div.ad-plea {
+display: none !important;
+}
+/* Display board banner? */
+div.boardBanner {
+margin-top: 60px !important;
+}
+#bannerCnt{
+box-shadow: rgba(150,150,150,.4) 1px 2px 4px 2px !important;
+border: 1px #ccc !important;
+}
+.boardTitle{
+/*padding-top: 36px !important;
+font-family: 'Open Sans', sans-serif !important;
+font-size: 28px !important;
+font-weight: 400 !important;
+color: #666999!important;*/
+display: none !important;
+}
+.boardSubtitle {
+font-family: 'Open Sans', sans-serif !important;
+font-weight: 400 !important;
+color: #666999!important;
+}
+/* Relative to posts. */
+.post.reply {
+font-family: 'Open Sans', sans-serif !important;
+font-size: 15px !important;
+background: #f8f8f8 !important;
+color: #666 !important;
+width: 100% !important;
+border: 0 !important;
+padding: 7px !important;
+box-shadow: rgba(200,200,200,.9) 1px 2px 4px 2px !important;
+-moz-box-sizing:border-box!important;
+}
+div.reply {
+flex:1 0;
+padding: 7px !important;
+width:100%;
+-moz-box-sizing:border-box!important;
+}
+.yotsuba:root .hide-post-button,
+.yotsuba-b:root .hide-post-button {
+display: none !important;
+}
+/* Relative to the thread */
+#unread-line {
+border:0!important;
+height:1px!important;
+margin-top:-10px!important;
+}
+.thread {
+margin-top: 53px !important;
+margin-right: 40px !important;
+margin-left: 40px !important;
+margin-bottom: 40px !important;
+}
+a.summary {
+font-family: 'Open Sans', sans-serif !important;
+font-size: 14px !important;
+}
+.replyContainer,
+#qp {
+padding: 0px !important;
+background: transparent !important;
+}
+div.postContainer.opContainer {
+display: inline-block !important;
+width: 100% !important;
+font-family: 'Open Sans', sans-serif !important;
+font-size: 14px !important;
+background: #f9f9f9!important;
+color: #666 !important;
+margin: 3px 2px 3px 0px !important;
+padding: 6px !important;
+box-shadow: rgba(215,215,215,.9) 1px 2px 4px 2px !important;
+-moz-box-sizing:border-box!important;
+}
+.postContainer .menu-button {
+top: -5px !important;
+opacity:0;
+float:right;
+right:-2px;
+transition:top 0.25s ease, opacity 0.1s ease;
+}
+.inline {
+padding-left: 15px !important;
+padding-right: 15px !important;
+border: 0 !important;
+}
+.inline .post.reply {
+background-color: #ebebeb !important;
+border: 0 !important;
+}
+/* Post subjects. */
+span.subject {
+color: #8C6699 !important;
+font-weight: normal !important;
+}
+/* Tripcodes. */
+span.postertrip {
+color: #667399 !important;
+}
+/* Post numbers. */
+span.postNum a {
+color: #998B66 !important;
+}
+/* Poster's name. */
+.useremail:hover .name:not(.capcode){
+color: #66998C !important;
+font-weight: normal !important;
+}
+span.name,
+.useremail:not(:hover) .name:not(.capcode) {
+color: #996673 !important;
+font-weight: normal !important;
+}
+.useremail {
+text-decoration: none !important;
+}
+/* Date and time of the posts. */
+span.dateTime {
+color: #997366 !important;
+}
+/* Quote links. */
+a.quotelink {
+color: #666699 !important;
+text-decoration: none !important;
+}
+/* Page Number */
+span.page-num {
+color: #66998C !important;
+}
+/* Reply Link */
+a.replylink {
+color: #667399 !important;
+}
+a.replylink:not(:hover) {
+color: #667399 !important;
+}
+/* Link to posts quoting the current post. */
+:root a.backlink,
+:root .backlink-container > a.backlink.deadlink,
+.warning,
+div.post div.postInfo span.postNum a:hover,
+:root a.replylink:hover,
+:root a:not(.entry):hover {
+color: #66998C !important;
+}
+/* Greentext. */
+blockquote > span.quote {
+color: #739966 !important;
+}
+/* Post menu button. */
+.post .menu-button {
+float: right;
+position: relative;
+left: 0px;
+opacity:0 !important;
+}
+.post:hover .menu-button {
+float: right;
+position: relative;
+left: 0px;
+opacity:1 !important;
+}
+.stub .menu-button,
+.postInfo .menu-button {
+opacity:0;
+float:right;
+right:-2px;
+top:-10px;
+transition:all 0.25s ease;
+}
+.stub .menu-button,
+.opContainer .postInfo .menu-button,
+.postContainer .postInfo .menu-button.open,
+.postContainer:hover .postInfo .menu-button {
+opacity:1;
+top:-1px;
+}
+.stub .menu-button,
+.opContainer .postInfo .menu-button {
+right:10px;
+}
+.inline .postInfo .menu-button {
+float:none;
+opacity:1;
+right:0!important;
+top:0!important;
+}
+.stub .menu-button .fa-bars:before,
+.postInfo .fa-bars:before {
+content:"?"!important;
+color: #999 !important;
+}
+.dialog.submenu,
+.entry,
+#menu .settings-link.entry,
+#menu .entry.unwatch-thread {
+color: #888 !important;
+font-family: "Open sans" !important;
+border: 0 !important;
+background: #f8f8f8 !important;
+}
+.dialog.submenu,
+#menu {
+box-shadow: #afafaf 1px 2px 4px 2px !important;
+}
+/* Hide "hide reply" buttons. */
+.postInfo > input,
+a.hide-reply-button > span {
+display: none !important;
+}
+/* Relative to post info, i.e. Post name, tripcode, post date, etc. */
+.postInfo a,
+div.postInfo {
+color: #6f6f6f !important;
+font-size: 15px !important;
+}
+/* Relative to file info, i.e. filename, file size, resolution, etc. */
+div.fileText {
+font-family: 'Open Sans', sans-serif !important;
+font-size: 0.780rem !important;
+}
+/* Post image */
+.fileThumb {
+box-shadow: rgba(150,150,150,.4) 1px 2px 4px 2px !important;
+border: 1px #ccc !important;
+}
+/* Fix post previews. */
+#qp {
+border: 0 !important;
+box-shadow: none !important;
+}
+/* Relative to the quick reply. */
+.close.fa.fa-times{
+display: none !important;
+}
+#qr.dialog.has-captcha.autohide{
+box-shadow: rgba(170,170,170,.9) 1px 0px 5px 1px !important;
+border: 1px solid #ccc !important;
+}
+#qr.autohide:not(:hover):not(.has-focus) {
+max-height:41px;
+transition:max-height 0.4s ease 1s;
+}
+#qr > div,
+#qr > form {
+transform:rotateX(180deg);
+}
+#qr > form {
+padding-top:24px!important;
+}
+#qr.autohide:not(:hover):not(.has-focus) > form {
+display:flex!important;
+}
+#qr {
+background: #f8f8f8 !important;
+color: #555 !important;
+border: none !important;
+border-radius: 0px !important;
+transition: all 0.2s ease 0s;
+box-shadow: rgba(170,170,170,.9) 1px 0px 5px 1px !important;
+left:auto!important;
+bottom:auto!important;
+max-height:350px;
+right:25px!important;
+top:1px!important;
+transform:rotateX(180deg);
+transition:max-height 0.4s ease;
+z-index:1!important;
+}
+#qr .textarea textarea {
+max-height:184px;
+transition:none!important;
+}
+#qr option:hover,
+#dump-button:hover,
+:root .field:hover,
+#menu .entry.focused,
+:root .field:focus {
+background:#dedede !important;
+border-color:#dedede !important;
+}
+#qr form {
+bottom: 12px !important;
+right: 0% !important;
+width: 300px !important;
+padding: 4px !important;
+margin-top: 23px !important;
+padding-top: 27px !important;
+padding-bottom: 3px !important;
+background: #f8f8f8 !important;
+border-color: #ccc !important;
+border-radius: 0px !important;
+}
+#dump-button {
+background: #e8e8e8 !important;
+border-color: #ccc !important;
+color: #444 !important;
+}
+/* Color of the fields. */
+#qr .field {
+background: #fbfbfb !important;
+border-color: #ccc !important;
+color: #444 !important;
+}
+/* Movable QR? */
+#qr span.move {
+display: inline !important;
+}
+/* Remove menu */
+#qr select {
+display: none !important;
+}
+/* Make the name field become invisible when there's something in it... */
+#qr input.field:nth-child(2) {
+background: #fbfbfb !important;
+color: #fbfbfb !important;
+}
+/* ... And then make it visible again when you hover over it. */
+#qr input.field:nth-child(2):hover {
+background: #fbfbfb !important;
+color: #444 !important;
+}
+/* Remove bar above the fields. */
+#qr > div {
+position: relative !important;
+}
+/* Relative to 4chan X's menu */
+#fourchanx-settings.dialog,
+fieldset legend,
+a.tab-main.tab-selected {
+font-family: sans-serif !important;
+font-size: 11px !important;
+background: #e8e8e8 !important;
+color: #444 !important;
+}
+/* Thread Watcher */
+#thread-watcher:before {
+content:"?";
+cursor:pointer;
+font-family:FontAwesome;
+font-size:13px!important;
+padding:6px 3px;
+position:absolute;
+top:-28px;
+left:210px;
+}
+#thread-watcher {
+font-family: "Open Sans", Sans serif !important;
+font-size: 11pt !important;
+background: #f8f8f8 !important;
+border-color: #ccc !important;
+color: #ccc !important;
+left:-210px!important;
+position:fixed!important;
+top:25px!important;
+z-index:10 !important;
+}
+#thread-watcher:hover,
+#thread-watcher:active,
+#thread-watcher:focus {
+background: #f8f8f8 !important;
+border-color: #ccc !important;
+}
+#thread-watcher > .move {
+display: none !important;
+}
+#thread-watcher,
+#thread-watcher:before {
+transition:left 0.2s ease 1s;
+}
+#thread-watcher:hover,
+#thread-watcher:hover:before {
+transition:left 0.2s ease;
+}
+#thread-watcher:hover {
+left:0!important;
+}
+#thread-watcher:hover:before {
+left:0px!important;
+color: #ccc !important;
+}
+#thread-watcher:before {
+text-decoration:none!important;
+}
+#qr .move,
+#thread-stats .move,
+#thread-watcher .move,
+#updater .move {
+cursor: default!important;
+color: #777 !important;
+font-family: "Open Sans", Sans serif !important;
+}
+/* Blotter */
+#blotter {
+display: none !important ;
+}
+/*** Animations ***/
+/* Change backlinks to >> and animate them. */
+a.backlink {
+text-decoration: none !important;
+font-size: 0 !important;;
+}
+.backlink:after {
+font-size: 11px !important;
+padding: 1px;
+content: '>>' !important;
+text-decoration: none !important;
+}
+.backlink:not(:first-child) {
+margin-left: -1.0rem;
+transition: all .1s linear .2s;
+opacity: 0;
+}
+/* Post menu animations. */
+.postContainer:hover .backlink {
+margin-left: 0rem;
+transition-delay: .1s;
+opacity: 100;
+}
+.post.reply a.menu-button {
+opacity: 0;
+transition: all .2s;
+}
+.post.reply:hover .menu-button {
+opacity: 100;
+transition: all .1s;
+}
+/* QR animations. */
+#qr.dialog.has-captcha.autohide,
+#qr.dialog.autohide {
+top: -300px !important;
+height: 21px !important;
+transition: all 0.7s ease 0s;
+}
+}
