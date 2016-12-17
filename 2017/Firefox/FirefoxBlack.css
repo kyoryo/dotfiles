@@ -151,12 +151,23 @@ filter: grayscale(100%) contrast(25%) !important;
    text-align: center !important;
     margin-top: 1px !important;
     border: none !important;
-    
+
      height: 30px !important;
     border: 0px solid #59444b !important;
     margin-top: 2px!important;
     width: 10000px !important;
     padding: 3px !important; 
+}
+
+/* silly border when hovered*/
+/*#urlbar:hover{
+-moz-appearance: none !important;
+box-shadow: #33CCFF 0px 0px 10px 4px!important;
+}*/
+/* silly border when focused*/
+#urlbar[focused="true"]{
+-moz-appearance: none !important;
+box-shadow: #333 0px 0px 0px 0px!important;
 }
 
 /* navbar */
