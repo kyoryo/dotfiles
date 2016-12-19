@@ -75,6 +75,7 @@ filter: grayscale(100%) contrast(25%) !important;
 }
 
 
+
 /*#TabsToolbar .tabbrowser-tab {
     min-width: 37px !important;
 }     */
@@ -267,6 +268,7 @@ color: var(--main-text) !important;
   background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
   color: var(--secondary-text) !important; 
+    font-weight: bold;
   border-bottom: 2px solid var(--url-bg) !important;   
   opacity: 1 !important;   
   /*border-radius: 12px !important;*/
@@ -654,7 +656,7 @@ color: var(--third-text) !important;
     1.0 0.0 0.0 0.0 0.0 \
     1.1 0.0 0.0 0.0 0.0 \
     1.1 0.0 0.0 1.1 0.0'/></filter></svg>#invert") !important;
-    /*filter: hue-rotate(120deg) !important;*/
+    filter: hue-rotate(120deg) !important;
      opacity: 0.5 !important;
   }
 
