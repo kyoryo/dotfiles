@@ -1,27 +1,32 @@
 @namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 /* options and add-ons menus */
+
 page xul|*#categories {
     background-color: #383838 !important;
 }
+
 page #nav-header {
     background-color: #383838 !important;
 }
+
 page xul|*.category {
     color: #fff !important;
 }
+
 page xul|*.category:not([disabled]):hover {
     background-color: #2e2e2e !important;
 }
+
 page .category[selected] {
     background-color: #242424 !important;
 }
+
 page .category[selected]:hover {
     background-color: #1f1f1f !important;
 }
 
 @-moz-document url("chrome://browser/content/browser.xul") {
-
     /* find bar */
     findbar {
         background-color: #383838 !important;
@@ -81,7 +86,7 @@ page .category[selected]:hover {
         border: 1px #000 !important;
         transition: .05s;
     }
-   /* #urlbar:hover {
+    /* #urlbar:hover {
         background: #fff !important;
         color: #000 !important;
         transition: .05s;
@@ -109,7 +114,7 @@ page .category[selected]:hover {
         border-right: 1px solid #767676;
         color: #fff;
         padding: 8px;
-    } 
+    }
     /* pinned tab fix */
     .tabbrowser-tab[pinned] {
         width: 34px;
@@ -306,7 +311,8 @@ page .category[selected]:hover {
         border-color: #444444 !important;
     }
     #urlbar[focused="true"] {
-        box-shadow: none !important;/*
+        box-shadow: none !important;
+        /*
         background: #fff !important;
         color: #000 !important;*/
     }
@@ -324,6 +330,20 @@ page .category[selected]:hover {
         .close-icon {
             list-style-image: url("chrome://global/skin/icons/close-inverted@2x.png");
         }
+    }
+    /* remove icons */
+    #memfx-toolbar-button,
+    #urlbar-reload-button,
+    .box-inherit.toolbarbutton-menubutton-button,
+    .scrollbutton-up,
+    .scrollbutton-down,
+    #urlbar-stop-button {
+        display: none;
+    }
+    /* Back Forward Button*/
+    #forward-button,
+    #back-button {
+        display: inherit;
     }
     /* margin left 2px to align with first tab icon */
     #personal-bookmarks toolbarbutton {
@@ -365,14 +385,13 @@ page .category[selected]:hover {
         -moz-appearance: none !important;
         height: 26px;
         font-size: 12px;
-        color: #fff ;
+        color: #fff;
         padding: 4px 8px;
     }
-
     /* fix text color in navbar menu bug report bookmarks toolbar button  */
     #nav-bar menu,
     #nav-bar menuitem {
-        color: #000 ;
+        color: #000;
         background-color: #fff;
     }
     /* fix menu color in urlbar menu bug report urlbar menu */
@@ -381,7 +400,6 @@ page .category[selected]:hover {
         background-color: #2b2b2b !important;
         color: #fff;
     }
-
     /* menu item hover highlight */
     menu[_moz-menuactive="true"],
     menuitem[_moz-menuactive="true"],
@@ -494,8 +512,6 @@ page .category[selected]:hover {
     .tab-content[pinned][titlechanged]:not([visuallyselected="true"]) {
         background-image: none !important;
     }
-
-
     /* tabs scrollbox */
     #TabsToolbar .toolbarbutton-1,
     .tabbrowser-arrowscrollbox > .scrollbutton-down,
@@ -532,7 +548,6 @@ page .category[selected]:hover {
         margin-inline-end: 0px;
         margin-inline-start: 0px;
     }
-
     #PersonalToolbar .bookmark-item[container] {
         list-style-image: url("http://imgh.us/folder-item_1.png");
     }
