@@ -1,0 +1,1 @@
+follow manual arch installation in their wiki website. it's good.
