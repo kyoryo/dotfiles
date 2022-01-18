@@ -1,6 +1,6 @@
 follow manual arch installation in their wiki website. it's good.
 
-# Post Installation
+# Post Installationg
 
 # Troubleshooting
 Known issues for thinkpad p50
