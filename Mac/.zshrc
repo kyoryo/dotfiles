@@ -1,0 +1,1 @@
+/Users/pintu/.zshrc
