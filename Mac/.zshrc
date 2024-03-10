@@ -97,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="codez ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
+alias vim="nvim"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:/Users/pintu/.spicetify
