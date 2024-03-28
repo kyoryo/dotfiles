@@ -1,7 +1,7 @@
 follow manual arch installation in their wiki website. it's good.
 
 # Post Installation
-this page intedded only cover thinkpad p50, and possibly other machine.
+this page inteded only cover thinkpad p50, and possibly other machine.
 ## Drivers
 - `networkmanager` for wifi
     please run `sysctemctl enable NetworkManager` after installing, see arch wiki for more information
