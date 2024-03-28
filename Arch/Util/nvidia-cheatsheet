@@ -1,0 +1,13 @@
+# to check what vga you have
+lspci -k | grep -A 2 -E "(VGA|3D)"
+
+# install proprietary nvidia driver
+# use nvidia-lte if using lte kernel
+pacman -S nvidia nvidia-utils nvidia-settings
+
+# PRIME is a technology to MANAGE hybrid graphic cards found on recent destop and laptop
+# to install
+pacman -S nvidia-prime
+
+# check what vga used on X app
+prime-run glxinfo | grep "OpenGL renderer"

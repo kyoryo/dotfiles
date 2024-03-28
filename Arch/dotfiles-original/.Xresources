@@ -1,7 +1,9 @@
 ! Do not re-arrange !
 
 ! URxvt Configuration
-URxvt.font:                       xft:mononoki Nerd Font:size=11:autohint=true,xft:Noto Color Emoji:pixelsize=11:antialias=false,xft:mononoki Nerd Font Mono:size=11:autohint=true
+URxvt.font:                       xft:Liberation Mono for Powerline:size=11:autohint=true,\
+                                  xft:Noto Color Emoji:pixelsize=12:antialias=false\
+                                  xft:mononoki Nerd Font Mono:size=11:autohint=true
 URxvt.geometry:                   84x16
 URxvt.internalBorder:             20
 URxvt.cursorBlink:                true
@@ -15,7 +17,9 @@ URxvt.scrollWithBuffer:           false
 URxvt.urgentOnBell:               false
 URxvt.depth:                      32
 URxvt.iso14755:                   false
-!URxvt.letterSpace: -1
+URxvt.iconFile:                   /home/ryo/.icons/gladient/term.png
+! Uncomment below if too much font spacing
+URxvt.letterSpace: 1
 
 ! URxvt Extensions
 URxvt.perl-ext-common:            default,tabbedex,url-select
@@ -62,6 +66,10 @@ URvxt.url-select.button:          2
 URxvt.url-select.launcher:        firefox
 URxvt.url-select.underline:       true
 
+! Cursors
+Xcursor.theme: capitaine-cursors-light
+!Xcursor.size: 16
+
 ! Color Schemes [ black > red > green > yellow > blue > magenta > cyan > white ]
 #define black0                    [95]#373E4D
 #define black1                    #3B4252
@@ -96,7 +104,6 @@ URxvt.url-select.underline:       true
 *.color12:                        blue1
 *.color13:                        magenta1
 *.color14:                        cyan1
-
 
 ! Termody [ Reverse the Visual ]
 *.foreground:                     white0
