@@ -163,8 +163,9 @@ multiplier = 3
 
 #startup modes:Windowed, Maximized, Fullscreen
 [window]
+decorations = "Buttonless" # none, Transparent, Buttonless
 dynamic_padding = false
-opacity = 1.0
+opacity = 0.90
 title = "Alacritty"
 startup_mode = "Windowed"
 
@@ -173,5 +174,5 @@ general = "Alacritty"
 instance = "Alacritty"
 
 [window.padding]
-x = 6
-y = 6
+x = 0
+y = 0
