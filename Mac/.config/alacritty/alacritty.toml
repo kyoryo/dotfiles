@@ -157,17 +157,25 @@ key = "End"
 mode = "~Alt"
 mods = "Shift"
 
+
+# key = "I"
+# mods = "Control"
+# chars = "\x1b[105;6u"
+
 [scrolling]
 history = 5000
 multiplier = 3
 
 #startup modes:Windowed, Maximized, Fullscreen
 [window]
-decorations = "Buttonless" # none, Transparent, Buttonless
+#decorations = "Buttonless" # none, Transparent, Buttonless
+#decorations = "none" # none, Transparent, Buttonless
 dynamic_padding = false
 opacity = 0.90
 title = "Alacritty"
-startup_mode = "Windowed"
+startup_mode = "Maximized" #"Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
+option_as_alt = 'Both'
+
 
 [window.class]
 general = "Alacritty"
