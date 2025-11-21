@@ -7,13 +7,15 @@ export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export GOBIN=$GOPATH/bin
 export AWS=$HOME/aws-cli/
-export PATH=~/.local/share/nvim/mason/bin:~/.docker/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH:$GOPATH:$GOBIN:$AWS
+export AWS_SESSION=$HOME/sessionmanager-bundle/bin
+export PATH=~/.local/share/nvim/mason/bin:~/.docker/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH:$GOPATH:$GOBIN:$AWS:$AWS_SESSION
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="nicoulaj"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,9 +77,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
@@ -108,10 +113,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lg="lazygit"
 
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
+# theme for zsh sh
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# now load zsh-syntax-highlighting plugin
 # should be on bottom (?) -- higlight command
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
