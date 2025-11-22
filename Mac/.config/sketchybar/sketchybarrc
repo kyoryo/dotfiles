@@ -3,8 +3,8 @@
 # For a (much) more advanced configuration example see my dotfiles:
 # https://github.com/FelixKratz/dotfiles
 
-FONT_FACE="Hack Nerd Font"
-# FONT_FACE="JetBrainsMono Nerd Font"
+# FONT_FACE="Hack Nerd Font"
+FONT_FACE="JetBrainsMono Nerd Font"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
@@ -17,13 +17,13 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 
 sketchybar --bar \
     position=top \
-    height=23 \
+    height=33 \
     blur_radius=100 \
     color=0x25000000 \
     margin=0 \
     padding_left=23 \
     padding_right=23 \
-    notch_width=0 \
+    notch_width=50 \
     display=main
 
 ##### Changing Defaults #####
