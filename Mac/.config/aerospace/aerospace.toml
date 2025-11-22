@@ -4,7 +4,7 @@
 # sketchbar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
 after-startup-command = [
-    'exec-and-forget sketchybar',
+    'exec-and-forget sketchybar --reload',
     'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=1.0'# janky border
 ]
 
@@ -25,7 +25,11 @@ enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
 # Mouse follows focus when focused monitor changes
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focused-monitor-changed = [
+    'move-mouse monitor-lazy-center',
+    'exec-and-forget /bin/bash -c /opt/homebrew/bin/sketchybar --trigger front_app_switched',
+    'exec-and-forget sketchybar --trigger update_windows'
+]
 
 [mode.main.binding]
 # See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
@@ -120,6 +124,6 @@ inner.horizontal = 10
 inner.vertical =   10
 outer.left =       10
 outer.bottom =     10
-outer.top =        34
+outer.top =        10
 outer.right =      10
 
