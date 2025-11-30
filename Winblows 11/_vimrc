@@ -1,0 +1,7 @@
+set rnu
+set nu
+set belloff=all
+syntax on
+set ignorecase
+set smartcase
+set hlsearch
