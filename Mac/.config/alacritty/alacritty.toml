@@ -168,11 +168,12 @@ multiplier = 3
 
 #startup modes:Windowed, Maximized, Fullscreen
 [window]
-#decorations = "Buttonless" # none, Transparent, Buttonless
+decorations = "Buttonless" # none, Transparent, Buttonless
 #decorations = "none" # none, Transparent, Buttonless
 dynamic_padding = false
 opacity = 0.90
 title = "Alacritty"
+# startup_mode = "Maximized" #"Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
 startup_mode = "Maximized" #"Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
 option_as_alt = 'Both'
 

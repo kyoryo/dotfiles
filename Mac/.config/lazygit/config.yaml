@@ -1,0 +1,9 @@
+# CONFIG LOCATION
+# - Linux: `~/.config/lazygit/config.yml`
+# - MacOS: `~/Library/Application\ Support/lazygit/config.yml`
+# - Windows: `%LOCALAPPDATA%\lazygit\config.yml` (default location, but it will also be found in `%APPDATA%\lazygit\config.yml`
+#
+# Config relating to git
+git:
+  # If true, do not allow force pushes
+  disableForcePushing: true
