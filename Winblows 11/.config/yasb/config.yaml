@@ -43,47 +43,50 @@ bars:
       right: 4
 
 #### GlazeWm
-    widgets:
-      left:
-      - "home"
-      - "glazewm_workspaces"
-      - "active_window"
-      center:
-      - "media"
-      right:
-      - "traffic"
-      - "glazewm_binding_mode"
-      - "glazewm_tiling_direction"
-      - "weather"
-      - "microphone"
-      - "volume"
-      - "notifications"
-      - "clock"
-      - "power_menu"
+    # widgets:
+    #   left:
+    #   - "home"
+    #   - "glazewm_workspaces"
+    #   - "active_window"
+    #   center:
+    #   - "media"
+    #   right:
+    #   - "traffic"
+    #   - "glazewm_binding_mode"
+    #   - "glazewm_tiling_direction"
+    #   - "weather"
+    #   - "microphone"
+    #   - "volume"
+    #   - "notifications"
+    #   - "clock"
+    #   - "power_menu"
     
 ### Komorebi
-    # widgets:
-    #  left:
-    #  - "home"
-    #  - "komorebi_workspaces"
-    #  - "komorebi_active_layout"
-    #  - "active_window"
-    #  center:
-    #  - "clock"
-    #  right:
-    #  - "media"
-    #  - "weather"
-    #  - "microphone"
-    #  - "volume"
-    #  - "notifications"
-    #  - "power_menu"
+    widgets:
+     left:
+     - "home"
+     # - "custom_button"
+     - "komorebi_workspaces"
+     - "active_window"
+     center:
+     - "media"
+     right:
+     - "traffic"
+     - "komorebi_active_layout"
+     - "weather"
+     - "microphone"
+     - "volume"
+     - "notifications"
+     - "clock"
+     - "power_menu"
 
 widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
       # label: "<span>\udb81\udf17</span>"
-      label: "<span>\udb80\udf5c</span>"
+      # label: "<span>\udb80\udf5c</span>"
+      label: "<span>\uf40e</span>"
       menu_list:
       - { title: "User Home", path: "~" }
       - { title: "Download", path: "~\\Downloads" }
@@ -153,7 +156,7 @@ widgets:
       label_no_window: ""
       label_icon: true
       label_icon_size: 14
-      max_length: 30
+      max_length: 50
       max_length_ellipsis: "..."
       monitor_exclusive: true
   clock:
@@ -175,15 +178,18 @@ widgets:
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
-      label_offline: "\u23fc Offline"
-      label_workspace_btn: "\u000d"
-      label_workspace_active_btn: "\u000d"
-      label_workspace_populated_btn: "\u000d"
-      label_default_name: "{index}"
-      label_zero_index: false
-      hide_empty_workspaces: false
+      label_offline: "KomorebiWM Offline"
+      hide_empty_workspaces: true
       hide_if_offline: true
-      animation: true
+      # label_offline: "\u23fc Offline"
+      # label_workspace_btn: "\u000d"
+      # label_workspace_active_btn: "\u000d"
+      # label_workspace_populated_btn: "\u000d"
+      # label_default_name: "{index}"
+      # label_zero_index: true
+      # hide_empty_workspaces: false
+      # hide_if_offline: true
+      # animation: true
   komorebi_active_layout:
     type: "komorebi.active_layout.ActiveLayoutWidget"
     options:
@@ -389,3 +395,22 @@ widgets:
         on_middle: "toggle_label"
         on_right: "disable_binding_mode"
     # By default binding mode names are fetched from GlazeWM and "display_name" option takes priority over "name".
+  # virtual desktops on windows
+  windows_workspaces:
+    type: "yasb.windows_desktops.WorkspaceWidget"
+    options:
+      label_workspace_btn: "\udb81\udc3d"
+      label_workspace_active_btn: "\udb81\udc3e"
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
+  custom_button:
+      type: "yasb.custom.CustomWidget"
+      options:
+        label: "<span>\uf40e</span>"
+        label_alt: "<span>\uf40e</span>"
+        class_name: "start-menu"
+        callbacks:
+          on_left: "exec start_menu"
