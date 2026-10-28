@@ -1,0 +1,4 @@
+[2m2025-11-29T17:55:19.153184Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to execute 'zebar'.
+
+Error: The operation was canceled by the user. (0x800704C7)
+[2m2025-11-29T18:51:04.027221Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m unknown anchor at line 63 column 14

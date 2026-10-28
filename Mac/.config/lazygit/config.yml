@@ -1,0 +1,4 @@
+git:
+  disableForcePushing: true
+os:
+  editPreset: 'nvim-remote'
