@@ -4,11 +4,18 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
+#export GOROOT=/usr/local/go
+export GOROOT="$(brew --prefix golang)/libexec"
 export GOBIN=$GOPATH/bin
 export AWS=$HOME/aws-cli/
 export AWS_SESSION=$HOME/sessionmanager-bundle/bin
+export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications"
 export PATH=~/.local/share/nvim/mason/bin:~/.docker/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH:$GOPATH:$GOBIN:$AWS:$AWS_SESSION
+#export EDITOR=nvim
+#export VISUAL="nvr --remote-wait +'set bufhidden=wipe'"
+export EDITOR=nvim
+export VISUAL=nvim
+export GIT_EDITOR="nvr --remote-wait +'set bufhidden=wipe'"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -128,3 +135,9 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+export PATH="$HOME/.cargo/bin:$PATH"
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Hermes Agent — ensure ~/.local/bin is on PATH
+export PATH="$HOME/.local/bin:$PATH"

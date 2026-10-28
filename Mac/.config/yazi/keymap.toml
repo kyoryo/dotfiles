@@ -1,0 +1,4 @@
+[open]
+rules = [
+  { mime = "application/pdf", use = "pdf" }
+]

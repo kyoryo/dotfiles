@@ -4,6 +4,19 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Disable Cmd+Tab",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [{ "key_code": "vk_none" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map left_option to soft-meta for Alacritty",
                         "manipulators": [
                             {
@@ -1223,6 +1236,7 @@
                     },
                     {
                         "description": "fn+tilde = grave, fn+shift+tilde=tilde",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -1255,25 +1269,8 @@
                     }
                 ]
             },
-            "devices": [
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 24926,
-                        "vendor_id": 7504
-                    },
-                    "treat_as_built_in_keyboard": true
-                }
-            ],
             "name": "VIM",
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": { "key_code": "right_option" },
-                    "to": [{ "key_code": "delete_or_backspace" }]
-                }
-            ],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"

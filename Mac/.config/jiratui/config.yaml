@@ -1,0 +1,3 @@
+jira_api_username: 'you@example.com'
+jira_api_token: 'CHANGE_ME'
+jira_api_base_url: 'https://YOUR-ORG.atlassian.net'

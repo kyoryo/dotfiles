@@ -7,3 +7,8 @@
 git:
   # If true, do not allow force pushes
   disableForcePushing: true
+os:
+  edit: "nvr -l --remote {{filename}}"
+  editCommand: 'nvr --remote-wait {{filename}}'
+  editPreset: 'nvim-remote'
+
